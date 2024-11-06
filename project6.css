@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Itim&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
 
-
+*{
+  margin: 0px;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 header {
@@ -33,14 +35,14 @@ header {
 }
 
 .fal{
-  background-image: url(fall.png);
+  background-image: url(falling0.3.jpg);
   overflow: hidden;
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position:
-
+  background-color: white;
+  background-position:150% 15%;
+  background-size: 200px;
 }
 
 .navigation{
@@ -52,9 +54,11 @@ header {
   background-color: #612E8D;
   justify-content: space-around;
   font-weight: bolder;
-  color: white;
 }
-
+.navigation a{
+  color:white;
+  text-decoration: none;
+} 
 
 .name{
   width: 50%;
@@ -81,5 +85,77 @@ main{
   height: auto;
   width: 100%;
   display: flex;
+  flex-direction: row;
+}
+
+.left-side{
+  /* border: 1px solid black; */
+  height: auto;
+  width: 50%;
+  background-color: #393695;
+  color: white;
+  font-family: "italiana";
+  display: flex;
   flex-direction: column;
+}
+.h1{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.p{
+  text-align: center;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.anime{
+  height: 130px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.anime img{
+  height: 100px;
+  width: 100px;
+}
+.right-side{
+  background-color: #393695;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-side img{
+  height: 493px;
+  width: 100%;
+  border-radius: 0% 0% 0% 15%;
+}
+
+.wow{
+  animation: wow 1s infinite alternate;
+  animation-delay: 0s;
+}
+@keyframes wow{
+  0%{
+    transform: rotate(60deg);
+  }
+  100%{
+    transform: rotate(-60deg);
+  }
+}
+
+.ice{
+  animation: ice 1s infinite alternate;
+  animation-delay: 0s;
+}
+@keyframes ice{
+  0%{
+    transform: rotate(60deg);
+  }
+  100%{
+    transform: rotate(-60deg);
+  }
 }
